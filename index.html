@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html ng-app="meanTEA">
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title>Mean TEA App</title>
+    <title>MEAN TEA APP</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/app.css">
   </head>
   <body ng-controller="mainController">
     <ul class="nav nav-tabs">
       <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">About</a></li>
-      <li role="presentation"><a href="#">Contact</a></li>
+      <li role="presentation"><a href="/#/about">About</a></li>
+      <li role="presentation"><a href="/#/contact">Contact</a></li>
     </ul>
-    <div class="dropDown">
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Search by Category
-        <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="#">awesome</a></li>
-          <li><a href="#">cold</a></li>
-          <li><a href="#">dark</a></li>
-          <li><a href="#">dry</a></li>
-          <li><a href="#">hot</a></li>
-          <li><a href="#">lucid</a></li>
-          <li><a href="#">spring</a></li>
-          <li><a href="#">summer</a></li>
-          <li><a href="#">warm</a></li>
-          <li><a href="#">winter</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </div>
-    </div>
-    <label>Search by name: <input type="text"></label>
+    {{1+5}}
+    {{whereami}}
+    {{works}}
+    <select name="searchBar">
+    <option>Search by Category</option>
+    <option value="value1">awesome</option>
+    <option value="value2">cold</option>
+    <option value="value3">dark</option>
+    <option value="value1">dry</option>
+    <option value="value2">hot</option>
+    <option value="value3">lucid</option>
+    <option value="value1">spring</option>
+    <option value="value2">summer</option>
+    <option value="value3">warm</option>
+    <option value="value3">winter</option>
+    </select>
+
+    <label>Search by Name: <input type="text"></label>
     <div ng-view></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/controllers/main_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/about_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/contact_controller.js"></script>
   </body>
 </html>

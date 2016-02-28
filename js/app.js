@@ -1,9 +1,9 @@
 // this is where your routes go //
-var app = angular.module('meanTEA', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider){
   $routeProvider
-  .when('/', {
+  .when('/teas', {
     templateUrl: './partials/home.html',
     controller: 'mainController'
   })
