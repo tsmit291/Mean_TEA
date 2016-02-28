@@ -1,0 +1,22 @@
+<div ng-controller="mainController">
+  <table>
+    <tr>
+      <th>Tea</th>
+      <th>Information</th>
+    </tr>
+    <tr ng-repeat="tea in teaCollection">
+      <td>
+        {{tea.imageUrl}}
+      </td>
+      <td>
+        <h2>{{tea.name}}</h2>
+        <h4><b>Price:</b> {{tea.price}}</h4>
+        <h4><b>Caffeine Scale:</b> {{tea.caffeineScale}}</h4>
+        <h4><b>Ingredients:</b> {{tea.ingredients}}</h4>
+        <h4><b>Rating: </b>{{tea.rating}}</h4>
+        <h4><b>In Stock?</b>{{tea.inStock}}</h4>
+        <h4><b>Categories:</b>
+          <ul ng-repeat="cat in categories">
+            <li>{{tea.categories}}</li>
+          </ul>
+        </h4>
