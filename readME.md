@@ -6,12 +6,10 @@ b. User can search by category with drop down list
 c. There is a table with a column for image and a column for tea information
 ~complete~
 d. There is a quantity drop down number list
-
+~complete~
 e. There is an add to bag button
-
-f. New items added to bag automatically default to a quantity of 1, if no quantity is selected.
-
-g. There is an add to bag button
+~complete~
+f/g. New items added to bag automatically default to a quantity of 1, if no quantity is selected.
 
 h. There is a checkout button
 
@@ -21,7 +19,7 @@ j. Tea information section has:
 Price, Caffeine Scale, Ingredients, Rating
 ~complete~
 In Stock? - shows Yes or No when True/False respectively
-
+~complete~
 k. Categories - goes through categories list and displays each one
 
 
