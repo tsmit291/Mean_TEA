@@ -6,13 +6,12 @@
     </tr>
     <tbody ng-repeat="tea in teaCollection">
       <tr>
-
       <td>
         <img src="{{tea.imageUrl}}">
       </td>
       <td>
         <h2>{{tea.name}}</h2>
-        <h4><b>Price:</b> {{tea.price}}</h4>
+        <h4><b>Price:</b> {{tea.price / 100 | currency}}</h4>
         <h4><b>Caffeine Scale:</b> {{tea.caffeineScale}}</h4>
         <h4><b>Ingredients:</b> {{tea.ingredients}}</h4>
         <h4><b>Rating: </b>{{tea.rating}}</h4>
@@ -22,5 +21,6 @@
             <li>{{tea.categories[0]}}</li>
           </ul>
         </h4>
+      </td>
     </tr>
     <!-- ng-show='{{tea.categories[1] ? true : false}}' -->
