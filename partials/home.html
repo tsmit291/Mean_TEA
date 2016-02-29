@@ -1,4 +1,19 @@
 <div ng-controller="mainController">
+  <select name="searchBar" ng-model:"searchCategory">
+    <option>Search by Category</option>
+    <option value="awesome">awesome</option>
+    <option value="cold">cold</option>
+    <option value="dark">dark</option>
+    <option value="dry">dry</option>
+    <option value="hot">hot</option>
+    <option value="lucid">lucid</option>
+    <option value="spring">spring</option>
+    <option value="summer">summer</option>
+    <option value="warm">warm</option>
+    <option value="winter">winter</option>
+  </select>
+
+  <label>Search by Name: <input ng-model='searchName' type="text"></label>
   <div class="container">
     <table class="table table-bordered">
       <tr>
@@ -23,7 +38,7 @@
           <h5><b>Price:</b> {{tea.price / 100 | currency}}</h5>
           <h5><b>Ingredients:</b> {{tea.ingredients}}</h5>
           <h5><b>Rating: </b>{{tea.rating}}</h5>
-          <h5 ng-filter='inStock'><b>In Stock? </b>{{tea.inStock ? 'Yes':'No'}}</h5>
+          <h5><b>In Stock? </b>{{tea.inStock ? 'Yes':'No'}}</h5>
           <h5><b>Categories:</b>
             <!-- <ul ng-repeat="cat in categories"> -->
               <li>{{tea.categories[0]}}</li>
