@@ -16,13 +16,17 @@
           <h4><b>Caffeine Scale:</b> {{tea.caffeineScale}}</h4>
           <h4><b>Ingredients:</b> {{tea.ingredients}}</h4>
           <h4><b>Rating: </b>{{tea.rating}}</h4>
-          <h4><b>In Stock?</b>{{tea.inStock}}</h4>
+          <h4 ng-filter='inStock'><b>In Stock? </b>{{tea.inStock ? 'Yes':'No'}}</h4>
           <h4><b>Categories:</b>
             <!-- <ul ng-repeat="cat in categories"> -->
               <li>{{tea.categories[0]}}</li>
             </ul>
           </h4>
         </td>
+        <td>
+          <label>Quantity:</label>
+          <select name="quantityBar">
+          <option>Quantity
       </tr>
   </div>
 </div>
