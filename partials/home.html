@@ -4,29 +4,45 @@
       <tr>
         <th>Tea</th>
         <th>Information</th>
+        <th>
+          <label>Sort by Price:</label>
+          <select ng-model="priceSort">
+            <option value=""></option>
+            <option value="price">Lowest</option>
+            <option value="-price">Highest</option>
+          </select>
+        </th>
       </tr>
-      <tbody ng-repeat="tea in teaCollection | filter:searchName">
+      <tbody ng-repeat="tea in teaCollection | filter:searchName | filter:searchCategory | orderBy: priceSort">
         <tr>
         <td>
           <img src="{{tea.imageUrl}}">
         </td>
         <td>
-          <h2>{{tea.name}}</h2>
-          <h4><b>Price:</b> {{tea.price / 100 | currency}}</h4>
-          <h4><b>Caffeine Scale:</b> {{tea.caffeineScale}}</h4>
-          <h4><b>Ingredients:</b> {{tea.ingredients}}</h4>
-          <h4><b>Rating: </b>{{tea.rating}}</h4>
-          <h4 ng-filter='inStock'><b>In Stock? </b>{{tea.inStock ? 'Yes':'No'}}</h4>
-          <h4><b>Categories:</b>
+          <h3>{{tea.name}}</h3>
+          <h5><b>Price:</b> {{tea.price / 100 | currency}}</h5>
+          <h5><b>Ingredients:</b> {{tea.ingredients}}</h5>
+          <h5><b>Rating: </b>{{tea.rating}}</h5>
+          <h5 ng-filter='inStock'><b>In Stock? </b>{{tea.inStock ? 'Yes':'No'}}</h5>
+          <h5><b>Categories:</b>
             <!-- <ul ng-repeat="cat in categories"> -->
               <li>{{tea.categories[0]}}</li>
             </ul>
-          </h4>
+          </h5>
         </td>
         <td>
           <label>Quantity:</label>
           <select name="quantityBar">
-          <option>Quantity
+            <option ng-repeat="qty in [1,2,3,4,5,6,7,8,9,10]">{{qty}}</option>
+          </select>
+          <button type="button" class="btn btn-warning" ng-click="teas.addToCart(tea,quantity)">Add to Cart</button>
+          <br>
+          <div class="caffeine-section">
+            <h4>Caffeine</h4>
+            mg/serving: {{tea.caffeineScale}}
+            <caffeine-meter caffeinemg="tea.caffeineScale" id="tea._id"></caffeine-meter>
+          </div>
+        </td>
       </tr>
   </div>
 </div>
