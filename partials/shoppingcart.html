@@ -1,0 +1,30 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Sub-total</th>
+    <th></th>
+  </tr>
+  <tbody ng-repeat="tea in teaCart">
+    <tr>
+    <td>
+      <h3>{{tea.name}}</h3>
+      <img src="{{tea.imageUrl}}">
+      <h5><b>Price:</b> {{tea.price / 100 | currency}}</h5>
+      <h5><b>Ingredients:</b> {{tea.ingredients}}</h5>
+      <h5><b>Rating: </b>{{tea.rating}}</h5>
+    </td>
+    <td>
+      {{qty}}
+    </td>
+    <td>
+      {{qty}} * {{tea.price}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-warning">Edit</button>
+      <button type="button" class="btn btn-danger">Remove</button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

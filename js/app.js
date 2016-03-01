@@ -15,4 +15,8 @@ app.config(function($routeProvider){
     templateUrl: './partials/contact.html',
     controller: 'contactController'
   })
+  .when('/cart', {
+    templateUrl: './partials/shoppingcart.html',
+    controller: 'shoppingcartController'
+  })
 });

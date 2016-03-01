@@ -1,4 +1,5 @@
 <div ng-controller="mainController">
+  <button type="button" class="btn btn-warning cartButton" id="checkoutCart" ng-click="checkoutCart">Shopping Cart</button>
   <select name="searchBar" ng-model:"searchCategory">
     <option>Search by Category</option>
     <option value="awesome">awesome</option>
@@ -42,6 +43,9 @@
           <h5><b>Categories:</b>
             <!-- <ul ng-repeat="cat in categories"> -->
               <li>{{tea.categories[0]}}</li>
+              <li>{{tea.categories[1]}}</li>
+              <li>{{tea.categories[2]}}</li>
+              <li>{{tea.categories[3]}}</li>
             </ul>
           </h5>
         </td>
@@ -59,5 +63,6 @@
           </div>
         </td>
       </tr>
+    </tbody>
   </div>
 </div>
