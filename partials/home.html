@@ -41,11 +41,8 @@
           <h5><b>Rating: </b>{{tea.rating}}</h5>
           <h5><b>In Stock? </b>{{tea.inStock ? 'Yes':'No'}}</h5>
           <h5><b>Categories:</b>
-            <!-- <ul ng-repeat="cat in categories"> -->
-              <li>{{tea.categories[0]}}</li>
-              <li>{{tea.categories[1]}}</li>
-              <li>{{tea.categories[2]}}</li>
-              <li>{{tea.categories[3]}}</li>
+            <ul>
+              <li ng-repeat="cat in tea.categories">{{cat}}</li>
             </ul>
           </h5>
         </td>

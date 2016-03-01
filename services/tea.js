@@ -3,7 +3,6 @@
 app.service('teaService', ['$http', '$q', function($http, $q){
   var deferred = $q.defer();
   $http.get('./teaCollection.json').then(function (data){
-    console.log('data is : ', data);
     deferred.resolve(data);
   });
   // says i want to do this later (a promise)
