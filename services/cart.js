@@ -18,4 +18,4 @@ app.service('cartService', ['$http', function($http){
     myCart.push(tea);
     console.log(myCart);
   }
-}])
+}]);
