@@ -5,7 +5,7 @@
     <th>Sub-total</th>
     <th></th>
   </tr>
-  <tbody ng-repeat="tea in teaCart">
+  <tbody ng-repeat="tea in myCart">
     <tr>
     <td>
       <h3>{{tea.name}}</h3>
@@ -15,12 +15,10 @@
       <h5><b>Rating: </b>{{tea.rating}}</h5>
     </td>
     <td>
-      {{qty}}
+      {{tea.qty}}
     </td>
     <td>
-      {{qty}} * {{tea.price}}
-      <!-- {{qty * tea.price}} -->
-
+      {{tea.qty * tea.price / 100 | currency}}
     </td>
     <td>
       <button type="button" class="btn btn-warning">Edit</button>

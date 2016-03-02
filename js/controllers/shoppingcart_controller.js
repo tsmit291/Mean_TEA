@@ -1,8 +1,8 @@
-app.controller('shoppingcartController', ['$scope', function($scope){
+app.controller('shoppingcartController', ['$scope', 'cartService', function($scope, cartService){
+$scope.myCart = cartService.myCart;
 
-$scope.works = "hello it works";
-
-$scope.shoppingcart = shopping.cart;
+$scope.test = cartService.test;
+// you can call test now in my shopping cart partial
 $scope.checkoutCart = true;
 
 }])
