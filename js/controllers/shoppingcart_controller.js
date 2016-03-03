@@ -8,4 +8,8 @@ $scope.checkoutCart = true;
 $scope.removeRow = cartService.removeRow
 // removeRow is equal to my removeRow function in my cart service file. this initializes it.
 
+$scope.editRow = function(qty){
+  $scope.revealDropdown = !$scope.revealDropdown
+}
+
 }])

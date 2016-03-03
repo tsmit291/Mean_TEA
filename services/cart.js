@@ -19,11 +19,9 @@ app.service('cartService', ['$http', function($http){
     tea.rating = this.tea.rating;
     tea.qty = parseFloat(qty);
     myCart.push(tea);
-    console.log(myCart);
   }
 
   this.removeRow = function(name) {
-    console.log('hello');
     var index = -1;
     var teaArray = eval(myCart);
     for(var i = 0; i < teaArray.length; i++){
@@ -34,8 +32,9 @@ app.service('cartService', ['$http', function($http){
       }
     }
     if (index === -1){
-      alert("There's nothing to delete");
+      alert("Your cart is empty!");
     }
     myCart.splice(index, 1);
   }
+
 }]);
